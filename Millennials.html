@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>New Orleans Fest</title>
+<link rel="icon" type="image/png" href="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/TRfavicon.png" />
+<!-- <link href="css/Normalize.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css" >
+
+<link href="css/Custom.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> -->
+
+<link type="text/css" href="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00eabdf6212d9f53e7d0c0e423ed815eac2170ff1ec0cc841a29" rel="stylesheet">
+
+<link type="text/css" href="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00ea6d34c670b3d04e33444ff190b24cc0d2a5c0dbf3aa399ab6" rel="stylesheet">
+
+<link type="text/css" href="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00ea9428c4222da29b25a9234bee540049a3dda922f02ebba15b" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <style type="text/css">
+    header .header {
+      position: relative;
+      display: inline-block;
+      background: no-repeat center center;
+      background-image: url('http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Orleans_HeaderImage.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      vertical-align: top;
+    }
+
+    section .OrleanRow {
+      position: relative;
+      display: inline-block;
+      background: no-repeat center center;
+      background-image: url('http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/FoodParallax.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      vertical-align: top;
+      z-index: -1;
+    }
+
+    #HeaderText {
+      font-size: 48px;
+      margin-bottom: 30px;
+      text-align: center;
+      /*font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+      color: #462866;
+    }
+    #FrenchQuarter {
+      text-align: center;
+      padding: 10px;
+    }
+    #FrenchImage {
+      margin: 0 auto;
+    }
+    .blankSpace {
+      height: 10px;
+    }
+    #themeColor {
+      color: purple;
+    }
+/* --------------------------------------------------- Mobile Phone ---------------------------------------------*/
+
+@media only screen and (max-width: 320px) {
+    /* styles for narrow IPHONE screens */
+    header .header {
+      background-image: url('http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Orleans_HeaderImage_Mobile.jpg');
+      background-attachment: scroll;
+      background-size: 700px 400px;
+    }
+    #FrenchImage {
+      margin: 0 auto;
+      width: 100%;
+      height: 90%;
+    }
+    #HeaderText {
+    font-size: 28px;
+    margin-bottom: 10px;
+    }
+    #tf-menu.navbar-default {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(0, 0, 0, 0.8);
+    }
+    #tf-menu {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+      transition: all 0.8s;
+    }
+
+}
+
+/* --------------------------------------------------- Tablet ---------------------------------------------*/
+
+@media only screen and (max-width: 916px) and (min-width: 320px) {
+    /* styles for ipad screens */
+    header .header {
+      background-image: url('http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Orleans_HeaderImage_Tablet.jpg');
+      background-attachment: scroll;
+      background-size: 1067px 600px;
+    }
+    #FrenchImage {
+      margin: 0 auto;
+      width: 80%;
+      height: 60%;
+    }
+    #HeaderText {
+    font-size: 34px;
+    margin-bottom: 10px;
+    }
+    #tf-menu.navbar-default {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(0, 0, 0, 0.8);
+    }
+    #tf-menu {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+      transition: all 0.8s;
+    }
+}
+  </style>
+  <!--<script type="text/javascript" src="js/modernizr.custom.js"></script>-->
+  <script type="text/javascript" src="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00ead0f1e30c58621ea81cdd1dd21bf0b3886fbfc51d417783c4"></script>
+</head>
+
+<body>
+  <span style="display:none;">
+    %%[
+
+    SET @i_dmid = i_dmid
+    SET @CET_24MonthRow = LookupRows("CET_24Month","i_dmid",@i_dmid)
+      IF RowCount(@CET_24MonthRow) > 0 Then 
+        SET @first_name = Field(Row(@CET_24MonthRow,1),"first_name")
+        SET @first_name = ProperCase(@first_name)
+        SET @last_name = Field(Row(@CET_24MonthRow,1),"last_name")
+        SET @last_name = ProperCase(@last_name)
+        SET @tier_score = Field(Row(@CET_24MonthRow,1),"Tier_score")
+        SET @tier_cd = Field(Row(@CET_24MonthRow,1),"tier_cd")
+        SET @accountType = Field(Row(@CET_24MonthRow,1),"ACCOUNT_TYPE")
+    ENDIF
+
+    ]%%
+  </span>
+<!-- Navigation
+==========================================-->
+<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="%%microsite_base_url[default]18141[/default]%%" ><img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Orleans_Harrahs_Logo.png" width="120" height="60" title="Harrah's New Orleans" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#tf-home" class="page-scroll">The French Quarter</a></li> -->
+        <li><a href="#tf-about" class="page-scroll">Nightlife in the Spotlight</a></li>
+        <li><a href="#tf-serve" class="page-scroll">World-Class Eats</a></li>
+        <li><a href="#tf-tips" class="page-scroll">Must-Do Festivals</a></li>
+        <!-- <li><a href="#tf-contact" class="page-scroll">Take Fun Indoors</a></li>
+ -->      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="header">
+    <h2 style="text-transform:uppercase;">Let the Good Times Roll</h2>
+  </div>
+</header>
+
+<section style="text-align:center;">
+    <div class="blankSpace"></div>
+    <div id="HeaderText">
+          Your 2016 Summer Adventure
+    </div>
+    <p id="PD100">
+      Total Rewards<sup>&#174;</sup> and Harrah's New Orleans invite you to discover one of the world's most fascinating cities. New Orleans is a truly unique melting pot of culture, food and music. Harrah's offers luxurious accommodations and over 100,000 square feet of gaming in the heart of the city, steps away from the French Quarter. With the exciting offers and recommended activities enclosed, you're guaranteed to have a good time in The Big Easy when you come to stay.
+    </p>
+</section>
+
+<div class="clear"></div>
+
+<!-- <section style="text-align:center;" id="tf-home">
+    <div class="blankSpace"></div>
+    <div id="HeaderText">
+          The French Quarter
+    </div>
+
+    <img id="FrenchImage" src="images/FrenchQuarters.jpg" alt="" width="700" height="400" /><br/><br/>
+    <p id="PD100">
+      The French Quarter, also known as the Vieux Carré, is the oldest neighborhood in the city of New Orleans. With so much culture, history and entertainment, you'll find an exciting experience around every corner.
+    </p>
+    <p id="PD100">
+      Take in the history of the French Quarter through an enchanting carriage ride. Marvel at the architectural gems as you stroll down Royal Street browsing the treasure trove of galleries, antique shops and boutiques.
+    </p>
+    <p id="PD100">
+      Stroll alongside the Mississippi River and pop in to Jackson Square. Peruse the French Market, a historically charming open-air market featuring five blocks of local produce, specialty art, handmade crafts, shopping and more.
+    </p>
+    <p id="PD100">
+      Seeking Live Jazz? Fritzel's European Jazz Club on Bourbon Street is a mecca for Jazz lovers and musicians alike. Whether you want to play or just listen, there is always a warm welcome awaiting you there.
+    </p>
+</section>
+
+<div class="clear"></div> -->
+
+<section id="tf-about">
+  <div class="nightlife"
+    
+    ><div id="HeaderText">
+      Nightlife in the Spotlight
+    </div
+    ><div id="NightlifeBlock1">
+
+      <img id="BourbonImage" src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/BourbonStreet.jpg" title="Bourbon Street" width="450" height="350" />
+
+    </div
+    ><div id="NightlifeBlock2">
+
+      <div class="clear"></div><div class="BourbonStreet">
+        <p id="StreetSpacing"><strong>Bourbon Street</strong><br/><br/>
+          Bourbon Street is loaded with the best Burlesque Clubs, DJs, bars and endless celebration opportunities. Everyone knows that this famous French Quarter street is the perfect place to host your bachelor party, birthday or girls night out.
+          <br/><br/>
+          Visit the haunted Creole cottage of Jean Lafitte's Blacksmith Shop, reported to be the oldest bar in America. Sip on a legendary Hurricane from Pat O'Brien's or get bombed on Hand Grenades at Tropical Isle. Take center stage singing karaoke at Cat's Meow or ride the mechanical bull at Bourbon Cowboy.
+        </p>
+      </div
+
+      ><div class="FrenchmanStreet">
+        <p id="StreetSpacing"><strong>Frenchman Street</strong><br/><br/>
+          Frenchman Street is an entertainment district located within walking distance of the French Quarter. It offers an amazing variety of venue styles and music ranging from traditional jazz to blues to reggae to rock all week long.
+          <br/><br/>
+          Begin your night at Spotted Cat Music Club listening to traditional jazz inside a cozy venue. Get swept away by a Monsoon at Snug Harbor, and browse local art and crafts on display at the Frenchmen Art Market. Hit the dance floor and groove to the sounds of the city's best big brass bands at d.b.a.
+        </p>
+      </div
+
+    ><div class="clear"></div><div class="MagazineStreet">
+        <p id="StreetSpacing"><strong>Magazine Street</strong><br/><br/>
+          For shopping, dining or just a casual stroll, no place in New Orleans is quite like Magazine Street. The six-mile long stretch from The Garden District to Uptown features some of the best art galleries, shops and boutiques to be found anywhere in the city.<br/><br/>
+          Browse bowties, neckties or decorative New Orleans-inspired belts with local patterns at NOLA Couture. Shop for t-shirts, footwear and accessories made by local artists at Fleurty Girl. Savor something sweet at Sucre, famous for its one-of-a-kind modern pastry confections, fancy chocolates and gelato.
+        </p>
+      </div
+
+      ><div class="FultonStreet">
+        <p id="StreetSpacing"><strong>Fulton Street</strong><br/><br/>
+          Fulton Street is a rare treasure for the pedestrian explorer, situated just outside of Harrah's Hotel. Restaurants and pubs with outdoor tables offer a relaxing space where patrons can enjoy a meal and a cocktail and, on occasion, listen to live music.<br/><br/>
+          Pop in to Aidan Gill for a haircut and a shave before your big night out. Enjoy a game on the big screen from the comfort of a leather recliner at Manning's. Bowl a strike and sip on curated cocktails at Fulton Alley.
+        </p>
+      </div
+
+      ></div
+
+  ></div> <!-- End Nightlife -->
+
+
+
+</section>
+
+<div class="clear"></div>
+
+<section id="tf-serve">
+<div class="OrleanRow">
+  <div class="blankSpace"></div>
+  <span id="HeaderText" style="color:white;"> World-Class Eats</span>
+  <div class="clear"></div>
+
+    <div id="Eats1">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Martini.jpg" id="Circles" title="Martini" width="100" height="100" />
+      <p id="StreetSpacing"><strong>Commander's Palace</strong><br/><br/>
+          Travel down St. Charles Avenue to this New Orleans landmark. Modern cuisine meets Creole classics inside a historic Garden District mansion. Come see why Zagat has voted it the most popular restaurant in town 18 years in a row. A favorite among locals is the lively jazz brunch where you can enjoy sparkling cocktails and the classic turtle soup.
+        </p>
+    </div>
+
+    <div id="Eats1">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Orleans_Steak.jpg" id="Circles" title="Steak" width="100" height="100" />
+      <p id="StreetSpacing"><strong>Besh Steak</strong><br/><br/>
+          Harrah's New Orleans is home to James Beard Award winner, Chef John Besh. Experience his love of local ingredients and cooking techniques with traditional steakhouse favorites. Enjoy the rich flavors of barbecued shrimp or a tender 22 oz. Porterhouse. Besh Steak also impresses with hand-selected wine and spirits to accompany each dish.
+        </p>
+    </div>
+
+    <div id="Eats1">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Sandwhich.jpg" id="Circles" title="Sandwhich" width="100" height="100" />
+      <p id="StreetSpacing"><strong>Central Grocery</strong><br/><br/>
+          No trip to The Big Easy is complete without a visit to Central Grocery on Decatur Street in the French Quarter. This Italian-American grocery serves an original New Orleans staple - the muffuletta. This oversized sandwich features toasted bread, marinated olive salad and Italian meats and cheeses.
+        </p>
+    </div>
+
+    <div id="Eats1">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Oysters.jpg" id="Circles" title="Oysters" width="100" height="100" />
+      <p id="StreetSpacing"><strong>Acme Oyster House</strong><br/><br/>
+          Since 1910 Acme Oyster House has been serving New Orleans classics including legendary po'boys, seafood gumbo and jambalaya. With several locations in the city including the French Quarter and inside Harrah's New Orleans, it's easy to experience this longtime New Orleans favorite.
+        </p>
+    </div>
+    
+
+
+
+</div>
+
+</section>
+
+<div class="clear"></div>
+
+
+<section id="tf-tips">
+
+  <div id="HeaderText">
+      Must-Do Festivals
+    </div
+    ><div id="reverse">
+    <div id="FestivalsBlock3">
+      <p id="FestivalSpacing"><strong>Tales of the Cocktail | July 19 - 24</strong><br/><br/>
+          What started as a small gathering of cocktail lovers has grown into the nation's premier cocktail festival with seminars, tastings, mixology competitions and much more.
+        </p>
+    </div>
+
+    <div id="FestivalsBlock4">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Festival2.jpg" id="Squares" title="Tales of the Cocktail" width="500" height="400" />
+    </div>
+</div>
+
+
+<div class="clear"></div>
+    <div id="FestivalsBlock1">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Festivalv2_3.jpg" id="Squares" title="Satchmo SummerFest" width="500" height="400" />
+
+    </div>
+    <div id="FestivalsBlock2">
+      <p id="FestivalSpacing"><strong>Satchmo SummerFest | August 5 - 7</strong><br/><br/>
+          Paying homage to Louis "Satchmo" Armstrong and the vital role he played in the development of American Jazz, Satchmo SummerFest has become a favorite festival for tourists and locals alike. The three-day festival features outdoor concerts, music history seminars, jazz exhibits, a jazz mass, a second-line parade and plenty of local food.
+        </p>
+
+    </div>
+
+<div class="clear"></div>
+
+<div id="reverse">
+    <div id="FestivalsBlock3">
+      <p id="FestivalSpacing"><strong>Southern Decadence | August 31 - September 5</strong><br/><br/>
+          Held annually over Labor Day weekend, this celebration of LGBT culture attracts over 125,000 participants from all over the world. The entertainment lineup includes parades, drag shows, contests, DJs, music and other events.
+        </p>
+    </div>
+
+    <div id="FestivalsBlock4">
+      <img src="http://image.email.caesars-marketing.com/lib/fe9c12727067047e75/m/22/Festival_4.jpg" id="Squares" title="Southern Decadence" width="500" height="400" />
+    </div>
+</div>
+
+</section>
+
+<div class="clear"></div>
+
+<div class="blankSpace"></div>
+<div class="blankSpace"></div>
+<div class="blankSpace"></div>
+<div class="blankSpace"></div>
+
+<footer>
+
+  <div>
+    <p>Exclusively for <strong>%%=v(@first_name)=%% %%=v(@last_name)=%%</strong> | #%%=v(@i_dmid)=%% </p>
+  </div>
+  
+
+
+
+  <div>
+    <h3>TERMS AND CONDITIONS</h3>
+    <p>
+      Advance hotel reservations required. Blackout dates may apply. Harrah's Hotel not guaranteed. Subject to availability. Major credit card or cash deposit necessary for reservations. Tax not included. Reservations not canceled more than 48 hours in advance charges room, tax and comp worth. Harrah's New Orleans will now charge a Resort Fee that will include complimentary WIFI for 2 devices per room per day, unlimited local calls, and access to the Fitness Center for two (2) guests per room, per day. The cost of this Resort Fee will be between $15-$20 plus tax per night per hotel room. Reward Credits can be used to pay for this fee. Harrah's reserves the right to change, cancel or amend this offer at any time. Non-transferable and non-negotiable. Additional restrictions may apply. Not valid with any other offer. Valid at Harrah's New Orleans only. This offer not intended for excluded patrons. All other trademarks not owned by Caesars that appear herein are the property of their respective owners. Must be 21 or older to enter casino and to gamble. 
+    <br/><br/>
+        Not responsible for typographical or other errors.
+    <br/><br/>
+        Know When To Stop Before You Start. &#174;Gambling Problem? Call 1-800-522-4700. 
+    <br/><br/>
+        &#169;2016 Caesars License Company, LLC. All rights reserved.
+    <br/><br/>        
+        The trademarks used herein are owned by Caesars License Company, LLC. and its affiliated companies.
+    <br/><br/>
+        This is an advertisement from Caesars Enterprise Services, LLC ("Caesars Entertainment"), transmitted by ExactTarget on Caesars Entertainment's behalf.
+    <br/><br/>
+        Caesars Enterprise Services, LLC<br/>
+        3475 Las Vegas Blvd., South, Las Vegas, NV 89109, ATTN: Total Service Central<br/>
+        <a href="https://www.caesars.com/" target="_blank" style="color:white;">www.caesars.com</a>
+    <br/><br/>
+
+
+  </div>
+
+</footer>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/iso.js"></script>
+<script type="text/javascript" src="js/main.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00eae5181fc407de8d74855352dec237b41ea1264cd9fb4d5fb9"></script>
+<script type="text/javascript" src="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00ea462f7fe1b009011b08b0da071b92289ecf875777b55ab68f"></script>
+<script type="text/javascript" src="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00ea084950fffba2cbec87c22b365ba0c35769915ebc40dbfe9a"></script>
+<script type="text/javascript" src="http://pages.email.caesars-marketing.com/page.aspx?QS=38dfbe491fab00ea959af7537e8fddd570c571564d20bb546f66f2bf04e40231"></script>
+</body>
+
+</html>
